@@ -5,12 +5,12 @@ let stage=1;//Holds the current stage of the player
 let wrongGuess=false ;//tracks whether the player guessed right
 let points=0;
 
-//this function generates a random between 1 and  a range passed in as a parameter
+//this function generates a random number between 1 and  a range passed in as a parameter
 const GenerateNumber= (range)=>{
   return Math.floor(Math.random()*range+1)
 }
 
-
+//This function handles the logic 
 const RunGuessGame=()=>{
   while(!wrongGuess){
   const generatedNumber= GenerateNumber(range);//Generates a number
@@ -42,7 +42,7 @@ stage=1,range=2,wrongGuess=!wrongGuess,points=0;
 
 const playGame= ()=>{
   while(!quit){
-   const decision=  parseInt(prompt("Ready to play ?1.Yes 2.Exit"));
+   const decision=  parseInt(prompt("Ready to play ?  1.Yes 2.Exit"));
     if(decision===1){
       RunGuessGame();
     }
@@ -58,5 +58,5 @@ const playGame= ()=>{
 //Stores the username of the player
 username= prompt("Enter a username");
 
-//This function beginis starts the game
+//This function  starts the game
 playGame();
